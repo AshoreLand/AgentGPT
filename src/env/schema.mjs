@@ -1,7 +1,7 @@
 // @ts-check
 import { z } from "zod";
 
-const requiredForProduction = () => process.env.NODE_ENV === "producion"
+const requiredForProduction = () => process.env.NODE_ENV === "production"
     ? z.string().min(1).trim()
     : z.string().min(1).trim().optional()
 
